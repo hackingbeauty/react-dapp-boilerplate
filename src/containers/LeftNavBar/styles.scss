@@ -1,0 +1,24 @@
+@import '../../containers/App/styles/variables';
+
+:local(.styles) {
+  padding: 30px;
+  text-align :center;
+
+  h1 {
+    font-size: 21px !important;
+  }
+
+  div:nth-child(1) > div:nth-child(2) > div:nth-child(1) {
+    background-color: $black !important;
+    height: 93px;
+  }
+
+  div:nth-child(1) > div:nth-child(2) {
+    background: $white !important;
+  }
+
+  #left-nav-container {
+    margin-top: 20px;
+  }
+
+}

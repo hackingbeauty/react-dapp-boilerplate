@@ -1,0 +1,16 @@
+@import '../../containers/App/styles/variables';
+
+:local(.styles) {
+  position: relative;
+  z-index:10000;
+
+  .right-drawer {
+    width: 500px;
+  }
+
+  @media (max-width: 600px) {
+    .right-drawer  {
+      width: 100% !important;
+    }
+  }
+}

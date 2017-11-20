@@ -1,0 +1,28 @@
+@import '../../containers/App/styles/variables';
+
+:local(.styles) {
+
+  z-index: 10000 !important;
+
+  & > div:nth-child(1) {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+
+  div:nth-child(3) {
+    display: inline-block;
+  }
+
+  .btn {
+    float: right;
+    margin:0 10px;
+  }
+
+  @media(max-width: 900px) {
+    & > div:nth-child(1) {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+}

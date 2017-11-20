@@ -1,0 +1,19 @@
+#!/bin/bash
+
+npm run lint # Run linter
+
+if [ $? -ne 0 ]; then
+  echo "[LINT ERROR] Your code has errors."
+  exit 1
+fi
+
+
+npm run test # Run tests
+
+if [ $? -ne 0 ]; then
+  echo "[TEST ERROR] Test must pass before pushing to origin."
+  exit 1
+fi
+
+
+# Add more checks here
