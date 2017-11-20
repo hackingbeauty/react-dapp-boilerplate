@@ -11,13 +11,16 @@ class Navigation extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentRoute: 'home'
+      currentRoute: ''
     }
   }
 
   componentDidMount() {
     const { pathname } = this.props.location;
-    this.handleChange(pathname, false);
+    let path
+
+    pathname === '/' ? path = '/home' : path = pathname
+    this.handleChange(path, false);
   }
 
   handleChange=(path, updateURL) => {
@@ -44,12 +47,13 @@ class Navigation extends Component {
   }
 
   render() {
+    const { currentRoute } = this.state
 
     return(
       <div className={styles}>
         <Tabs
           className="tabs"
-          value={this.state.currentRoute}
+          value={currentRoute}
           onChange={this.handleChange}>
           <Tab
             icon={<HomeIcon />}
