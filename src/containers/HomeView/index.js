@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from 'components/Button'
 
 /* component styles */
 import { styles } from './styles.scss';
@@ -11,7 +12,12 @@ export default class HomeView extends Component {
   render() {
     return (
       <div className={styles}>    
-        <h2>The Home View</h2>
+        <div id="upload-photo-container">
+          <div id="upload-actions">
+            <Button label="Choose photo to upload" raised={true} />
+            <span>or drag and drop it here</span>
+          </div>
+        </div>
       </div>
     );
   }

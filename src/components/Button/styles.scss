@@ -1,11 +1,12 @@
 @import '../../containers/App/styles/variables';
 
 :local(.styles) {
+
   .btn {
     cursor: pointer;
 
     &.primary {
-      color: $lightBlue !important;
+      color: red !important;
 
       button {
         background-color: $lightBlue !important;
@@ -21,5 +22,18 @@
     }
 
   }
+
+
+  .primary {
+    color: red !important;
+  }
 }
+
+
+
+
+
+
+
+
 

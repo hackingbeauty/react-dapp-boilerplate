@@ -1,3 +1,3 @@
 export const appConfig = {
-  name: 'React Dapp'
+  name: 'Proof Of Existence'
 }
