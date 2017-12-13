@@ -63,6 +63,9 @@
     "webpack-merge": "^0.7.3"
   },
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.0.1",
+    "@fortawesome/fontawesome-free-solid": "^5.0.1",
+    "@fortawesome/react-fontawesome": "0.0.16",
     "material-ui": "^0.19.4",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
