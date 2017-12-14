@@ -2,7 +2,7 @@
 
 :local(.styles) {
 	color: $black;
-
+	
 	#upload-photo-container {
 		display: flex;
 		justify-content: center;
@@ -11,7 +11,7 @@
 		top: 60px;
 		border: 4px dotted $lighterGrey;
 		height: 300px;
-		width: 670px;
+		width: 80%;
 		margin: 0 auto;
 		background:  $white35
 	}

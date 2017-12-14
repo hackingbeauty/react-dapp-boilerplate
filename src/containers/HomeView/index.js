@@ -12,12 +12,14 @@ export default class HomeView extends Component {
 
   render() {
     return (
-      <div className={styles}>    
-        <div id="upload-photo-container">
-          <div id="upload-actions">
-            <Icon icon="upload "className="upload-icon" />
-            <Button label="Choose photo to upload" raised={true} />
-            <span>or drag and drop it here</span>
+      <div className={styles}>   
+        <div id="home-view"> 
+          <div id="upload-photo-container">
+            <div id="upload-actions">
+              <Icon icon="upload" className="upload-icon" />
+              <Button label="Choose photo to upload" raised={true} />
+              <span>or drag and drop it here</span>
+            </div>
           </div>
         </div>
       </div>
