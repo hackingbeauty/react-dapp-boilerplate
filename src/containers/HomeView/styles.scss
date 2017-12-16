@@ -13,7 +13,11 @@
 		height: 300px;
 		width: 80%;
 		margin: 0 auto;
-		background:  $white35
+		background:  $white35;
+		
+		&.drop {
+			border: 5px solid red;
+		}
 	}
 
 	#upload-actions {

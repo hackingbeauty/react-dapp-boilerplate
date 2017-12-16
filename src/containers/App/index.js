@@ -1,13 +1,13 @@
-import React, { Component }       from 'react';
-import { connect }                from 'react-redux';
-import { bindActionCreators }     from 'redux';
-import injectTapEventPlugin       from 'react-tap-event-plugin';
-import getMuiTheme                from 'material-ui/styles/getMuiTheme';
-import MuiThemeProvider           from 'material-ui/styles/MuiThemeProvider';
+import React, { Component }   from 'react';
+import { connect }            from 'react-redux';
+import { bindActionCreators } from 'redux';
+import injectTapEventPlugin   from 'react-tap-event-plugin';
+import getMuiTheme            from 'material-ui/styles/getMuiTheme';
+import MuiThemeProvider       from 'material-ui/styles/MuiThemeProvider';
 import { HashRouter,
          Route,
          Redirect,
-         Switch }                 from 'react-router-dom';
+         Switch }             from 'react-router-dom';
 
 // global styles for entire app
 import './styles/app.scss';
