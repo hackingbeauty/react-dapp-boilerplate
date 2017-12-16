@@ -1,39 +1,5 @@
 @import '../../containers/App/styles/variables';
 
 :local(.styles) {
-	color: $black;
-	
-	#upload-photo-container {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		position: relative;
-		top: 60px;
-		border: 4px dotted $lighterGrey;
-		height: 300px;
-		width: 80%;
-		margin: 0 auto;
-		background:  $white35;
-		
-		&.drop {
-			border: 5px solid red;
-		}
-	}
-
-	#upload-actions {
-		width: 300px;
-		text-align: center;
-
-		span {
-			display: inline-block;
-			margin-top: 15px;
-		}
-	}
-
-	.upload-icon {
-		font-size: 100px;
-		color: $pink;
-		margin-bottom: 10px;
-	}
 
 }

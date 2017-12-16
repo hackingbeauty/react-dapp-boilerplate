@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { DragDropContext, DragDropContextProvider } from 'react-dnd'
 import HTML5Backend, { NativeTypes } from 'react-dnd-html5-backend'
-import UploadBox from 'components/UploadBox'
+import { UploadBox } from 'components/UploadBox'
 
 /* component styles */
 import { styles } from './styles.scss';
