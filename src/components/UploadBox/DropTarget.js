@@ -4,8 +4,6 @@ import { DropTarget as ReactDnDDropTarget} from 'react-dnd'
 import Button from 'components/Button'
 import Icon from 'components/Icon'
 
-import { styles } from './styles.scss'
-
 const boxTarget = {
 	drop(props, monitor) {
 		if (props.onDrop) {
@@ -43,14 +41,12 @@ export default class DropTarget extends Component {
 		const fileList = this.getFileList(files)
 
 		return connectDropTarget(
-			<div className={styles}>
-				<div id="upload-container" className={isActive ? 'drop' : ''}>
-		       <div id="upload-actions">
-		        <Icon icon="upload" className="upload-icon" />
-		        <Button label="Choose photo to upload" raised={true} />
-		        <span>{isActive ? 'Release to drop' : 'Drag file here'}</span>
-		        { files.length !== 0 && fileList }
-		      </div>
+			<div id="upload-container" className={isActive ? 'drop' : ''}>
+	       <div id="upload-actions">
+	        <Icon icon="upload" className="upload-icon" />
+	        <Button label="Choose photo to upload" raised={true} />
+	        <span>{isActive ? 'Release to drop' : 'Drag file here'}</span>
+	        { files.length !== 0 && fileList }
 	      </div>
       </div>
 		)
