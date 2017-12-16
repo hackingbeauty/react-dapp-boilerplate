@@ -6,32 +6,35 @@
     cursor: pointer;
 
     &.primary {
-      color: red !important;
-
+      
       button {
         background-color: $lightBlue !important;
       }
     }
 
     &.secondary {
-      color:  $pink !important;
+      color: $pink !important;
 
       button {
         background-color: $pink !important;
       }
     }
 
+    &.tertiary {
+      color: $gold !important;
+
+      button {
+        background-color: $gold !important;
+      }
+
+      span {
+        color: $black !important;
+      }
+    }
+
   }
 
-
-  .primary {
-    color: red !important;
-  }
 }
-
-
-
-
 
 
 

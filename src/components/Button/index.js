@@ -12,8 +12,6 @@ import { FlatButton,
 /* component styles */
 import { styles } from './styles.scss';
 
-const mainClassName = 'btn';
-
 export default function Button(props) {
   const buttonElem = createButton(props);
   return (
@@ -36,7 +34,7 @@ function createButton(props) {
   } = props;
 
   let buttonElem;
-  const finalClassName = `${className} ${secondary ? 'secondary' : 'primary'}`
+  const finalClassName = `btn ${className} ${secondary ? 'secondary' : 'primary'}`
 
   if(props.floating) {
     buttonElem = <FloatingActionButton
@@ -122,7 +120,7 @@ Button.defaultProps = {
   type      : 'button',
   raised    : false,
   label     : '',
-  className : mainClassName,
+  className : 'btn',
   disabled  : false,
   primary   : true,
   secondary : false

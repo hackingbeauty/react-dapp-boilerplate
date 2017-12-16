@@ -2,21 +2,20 @@
 
 :local(.styles) {
 	color: $black;
+	margin: 50px 0 40px 0;
 	
 	#upload-container {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		position: relative;
-		top: 60px;
-		border: 4px dotted $lighterGrey;
+		border: 3px dotted $lighterGrey;
 		height: 300px;
 		width: 80%;
 		margin: 0 auto;
 		background:  $white35;
 		
 		&.drop {
-			border: 5px solid red;
+			border: 3px dashed $pink;
 		}
 	}
 

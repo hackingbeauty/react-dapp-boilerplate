@@ -16,7 +16,6 @@ class DetailsView extends Component {
   }
 
   render() {
-
     return (
       <div className={styles}>
         <Drawer
