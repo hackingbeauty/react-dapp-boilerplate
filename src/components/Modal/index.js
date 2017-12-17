@@ -1,5 +1,6 @@
-import React, { Component, PropTypes }  from 'react';
-import { Dialog }                       from 'material-ui';
+import React, { Component }  from 'react';
+import PropTypes             from 'prop-types';
+import { Dialog }            from 'material-ui';
 
 /* component styles */
 import { styles } from './styles.scss';

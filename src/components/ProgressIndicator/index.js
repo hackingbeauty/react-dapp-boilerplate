@@ -6,7 +6,7 @@ import { styles } from './styles.scss';
 
 export default class ProgressIndicator extends Component {
   constructor(props) {
-    super(props);
+    super(props)
   }
 
   render() {

@@ -1,6 +1,7 @@
-import React, { PropTypes }  from 'react';
+import React 					 from 'react';
+import PropTypes       from 'prop-types';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import { faUpload } from '@fortawesome/fontawesome-free-solid'
+import { faUpload } 	 from '@fortawesome/fontawesome-free-solid'
 
 /* component styles */
 import { styles } from './styles.scss';

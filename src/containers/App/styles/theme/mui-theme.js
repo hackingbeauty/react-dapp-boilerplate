@@ -1,5 +1,4 @@
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-
 const styleVariables = require('sass-extract-loader!../variables.scss');
 
 const { 
@@ -10,32 +9,35 @@ const {
   $white
 } = styleVariables.global
 
-/* references - https://github.com/mui-org/material-ui/blob/master/src/styles/getMuiTheme.js */
+/* 
+ * Reference
+ * https://github.com/mui-org/material-ui/blob/master/src/styles/getMuiTheme.js 
+ */
 
 export default getMuiTheme({
   appBar: {
     height: 75,
-    color: $beige,
-    textColor: $black
+    color: $beige.value.hex,
+    textColor: $black.value.hex
   },
-   tabs: {
-    backgroundColor: $beige,
-    textColor: $black,
-    selectedTextColor: $lightBlue
+  tabs: {
+    backgroundColor: $beige.value.hex,
+    textColor: $black.value.hex,
+    selectedTextColor: $lightBlue.value.hex
   },
   raisedButton: {
-  	textColor: $white,
-  	primaryColor: $lightBlue,
-  	secondaryColor: $pink
+  	textColor: $white.value.hex,
+  	primaryColor: $lightBlue.value.hex,
+  	secondaryColor: $pink.value.hex
   },
   flatButton: {
-  	textColor: $white,
-  	primaryColor: $lightBlue,
-  	secondaryColor: $pink
+  	textColor: $white.value.hex,
+  	primaryColor: $lightBlue.value.hex,
+  	secondaryColor: $pink.value.hex
   },
   floatingActionButton: {
-  	textColor: $white,
-  	primaryColor: $lightBlue,
-  	secondaryColor: $pink
+  	textColor: $white.value.hex,
+  	primaryColor: $lightBlue.value.hex,
+  	secondaryColor: $pink.value.hex
   }
 });

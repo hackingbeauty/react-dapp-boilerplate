@@ -90,25 +90,26 @@ export default class DropTarget extends Component {
   render() {
     const { connectDropTarget} = this.props
     const { files } = this.state
-    const isActive = this.isActive()
     const fileList = this.getFileList(files)
-    const containerClassName= isActive ? 'drop' : ''
+    const isActive = this.isActive()
     const helperText = this.getHelperText()
+    const containerClassName= isActive ? 'drop' : ''
+    const disabled = files.length === 0 ? false : true
 
     return connectDropTarget(
 			<div id="upload-container" className={containerClassName}>
         <div id="upload-actions">
           <Icon icon="upload" className="upload-icon" />
           <Button
-          label="Choose photo to upload"
-          raised={true}
-          disabled={files.length} 
-          onTouchTap={this.showUploadDialogBox} />
+            label="Choose photo to upload"
+            raised={true}
+            disabled={disabled} 
+            onTouchTap={this.showUploadDialogBox} />
           <input 
-          name="myFile" 
-          type="file" 
-          ref={input => this.inputElement = input} 
-          onChange={this.handleFileUpload} />
+            name="myFile" 
+            type="file" 
+            ref={input => this.inputElement = input} 
+            onChange={this.handleFileUpload} />
           {fileList}
           {helperText}
         </div>
