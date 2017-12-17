@@ -28,7 +28,7 @@ export default class DropTarget extends Component {
 
   constructor(props) {
     super(props)
-    const { files  } = props
+    const { files } = props
     
     this.state = {
       files: []
@@ -50,7 +50,7 @@ export default class DropTarget extends Component {
 		)
 		
     return <ul id="file-list">{list}</ul>
-	}
+	                    }
 
   showUploadDialogBox=() => {
     const { files } = this.props

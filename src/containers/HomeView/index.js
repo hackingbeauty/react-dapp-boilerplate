@@ -36,7 +36,7 @@ class HomeView extends Component {
       <div className={styles}>   
         <div id="home-view">   
           <UploadBox onDrop={this.onDrop} />
-            <div className={!fileAdded ? "opaque" : ""}>
+            <div className={!fileAdded ? 'opaque' : ''}>
               <div id="register-actions">
                 <Button 
                   onTouchTap={this.registerAsset}
