@@ -9,11 +9,13 @@ import { HashRouter,
          Redirect,
          Switch }             from 'react-router-dom';
 
-// global styles for entire app
+/* 
+ * Import global styles into entire app 
+ */
 import './styles/app.scss';
 
 /* actions */
-import * as uiActionCreators    from 'core/actions/actions-ui';
+import * as uiActionCreators  from 'core/actions/actions-ui';
 
 /* application containers & components */
 import Header         from 'containers/Header';
@@ -21,6 +23,7 @@ import LeftNavBar     from 'containers/LeftNavBar';
 import HomeView       from 'containers/HomeView';
 import ListView       from 'containers/ListView';
 import DetailsView    from 'containers/DetailsView';
+import RegisterView   from 'containers/RegisterView';
 import Modal          from 'components/Modal';
 
 injectTapEventPlugin();
@@ -43,6 +46,7 @@ export class App extends Component {
                 <Switch>
                   <Route path="/home" component={HomeView} />
                   <Route path="/list" component={ListView} />
+                  <Route path="/register" component={RegisterView} />
                   <Redirect from="/" to="/home" />
                 </Switch>
               </div>

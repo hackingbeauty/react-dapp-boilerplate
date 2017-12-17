@@ -25,8 +25,9 @@ class HomeView extends Component {
     })
   }
 
-  registerAsset=() => {
-    alert('route to register view')
+  registerAsset=() => {    
+    const { history } = this.props
+    history.push('/register')
   }
 
   render() {
