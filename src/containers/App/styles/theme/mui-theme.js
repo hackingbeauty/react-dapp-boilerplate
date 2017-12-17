@@ -26,18 +26,18 @@ export default getMuiTheme({
     selectedTextColor: $lightBlue.value.hex
   },
   raisedButton: {
-  	textColor: $white.value.hex,
-  	primaryColor: $lightBlue.value.hex,
-  	secondaryColor: $pink.value.hex
+    textColor: $white.value.hex,
+    primaryColor: $lightBlue.value.hex,
+    secondaryColor: $pink.value.hex
   },
   flatButton: {
-  	textColor: $white.value.hex,
-  	primaryColor: $lightBlue.value.hex,
-  	secondaryColor: $pink.value.hex
+    textColor: $white.value.hex,
+    primaryColor: $lightBlue.value.hex,
+    secondaryColor: $pink.value.hex
   },
   floatingActionButton: {
-  	textColor: $white.value.hex,
-  	primaryColor: $lightBlue.value.hex,
-  	secondaryColor: $pink.value.hex
+    textColor: $white.value.hex,
+    primaryColor: $lightBlue.value.hex,
+    secondaryColor: $pink.value.hex
   }
 });
