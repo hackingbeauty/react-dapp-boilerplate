@@ -1,34 +1,41 @@
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
+const styleVariables = require('sass-extract-loader!../variables.scss');
+
+const { 
+  $beige,
+  $black,
+  $lightBlue,
+  $pink,
+  $white
+} = styleVariables.global
+
 /* references - https://github.com/mui-org/material-ui/blob/master/src/styles/getMuiTheme.js */
 
 export default getMuiTheme({
-	palette: {
-		primary1Color: 'organge'
-	},
   appBar: {
     height: 75,
-    color: '#f4f3ef',
-    textColor: 'black'
+    color: $beige,
+    textColor: $black
   },
    tabs: {
-    backgroundColor: '#f4f3ef',
-    textColor: 'black',
-    selectedTextColor: '#0096ef'
+    backgroundColor: $beige,
+    textColor: $black,
+    selectedTextColor: $lightBlue
   },
   raisedButton: {
-  	textColor: 'white',
-  	primaryColor: '#0096ef',
-  	secondaryColor: '#ff4081'
+  	textColor: $white,
+  	primaryColor: $lightBlue,
+  	secondaryColor: $pink
   },
   flatButton: {
-  	textColor: 'white',
-  	primaryColor: '#0096ef',
-  	secondaryColor: '#ff4081'
+  	textColor: $white,
+  	primaryColor: $lightBlue,
+  	secondaryColor: $pink
   },
   floatingActionButton: {
-  	textColor: 'white',
-  	primaryColor: '#0096ef',
-  	secondaryColor: '#ff4081'
+  	textColor: $white,
+  	primaryColor: $lightBlue,
+  	secondaryColor: $pink
   }
 });
