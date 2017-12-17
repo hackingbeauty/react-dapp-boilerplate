@@ -28,7 +28,7 @@ export default class UploadBox extends Component {
     const { droppedFiles } = this.state
 
     return (
-    	<DragDropContextProvider backend={HTML5Backend}>
+      <DragDropContextProvider backend={HTML5Backend}>
         <div className={styles}>
           <DropTarget
           accepts={[FILE]}

@@ -28,7 +28,6 @@ export default class DropTarget extends Component {
 
   constructor(props) {
     super(props)
-    const { files } = props
     
     this.state = {
       files: []
@@ -42,7 +41,6 @@ export default class DropTarget extends Component {
   }
 
   getFileList(files) {
-    console.log('THE FILES ARE: ', files)
     const list = files.map(file =>
 			<li key={file.name}>
 				{`${file.name} of size ${file.size} and type ${file.type}`}
@@ -50,7 +48,7 @@ export default class DropTarget extends Component {
 		)
 		
     return <ul id="file-list">{list}</ul>
-	                    }
+  }
 
   showUploadDialogBox=() => {
     const { files } = this.props
@@ -90,7 +88,7 @@ export default class DropTarget extends Component {
   }
 
   render() {
-    const { canDrop, isOver, connectDropTarget} = this.props
+    const { connectDropTarget} = this.props
     const { files } = this.state
     const isActive = this.isActive()
     const fileList = this.getFileList(files)
@@ -99,21 +97,21 @@ export default class DropTarget extends Component {
 
     return connectDropTarget(
 			<div id="upload-container" className={containerClassName}>
-	       <div id="upload-actions">
-	        <Icon icon="upload" className="upload-icon" />
-	        <Button
-            label="Choose photo to upload"
-            raised={true}
-            disabled={files.length} 
-            onTouchTap={this.showUploadDialogBox} />
+        <div id="upload-actions">
+          <Icon icon="upload" className="upload-icon" />
+          <Button
+          label="Choose photo to upload"
+          raised={true}
+          disabled={files.length} 
+          onTouchTap={this.showUploadDialogBox} />
           <input 
-            name="myFile" 
-            type="file" 
-            ref={input => this.inputElement = input} 
-            onChange={this.handleFileUpload} />
+          name="myFile" 
+          type="file" 
+          ref={input => this.inputElement = input} 
+          onChange={this.handleFileUpload} />
           {fileList}
           {helperText}
-	      </div>
+        </div>
       </div>
 		)
   }

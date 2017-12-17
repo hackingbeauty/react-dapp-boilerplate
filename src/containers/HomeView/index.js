@@ -61,8 +61,5 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default withRouter(
-  connect(
-    null,
-    mapDispatchToProps)
-  (HomeView)
+  connect(null, mapDispatchToProps)(HomeView)
 )
