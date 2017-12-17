@@ -1,20 +1,15 @@
 /* global styles */
 
-@import 'variables';
 @import 'third-party/normalize';
+@import 'variables';
 @import 'fonts';
 @import 'typography';
 @import 'links';
 
 :global(body) {
 
-  background: linear-gradient($darkGrey35, $darkGrey);
-  background: $darkGrey;
-  color: $white;
-
-  a {
-    color: $lightBlue;
-  }
+  background: $white;
+  color: $black;
 
   img {
     max-width: 100%;

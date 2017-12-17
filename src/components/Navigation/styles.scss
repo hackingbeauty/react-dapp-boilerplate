@@ -10,13 +10,6 @@
     margin: 0 auto;
   }
 
-  .tabs > div {
-    background-color: $black !important;
-    button {
-      color: $lightBlue !important;
-    }
-  }
-
   .tabs > div:nth-child(2) div {
     background-color: $lightBlue !important;
   }

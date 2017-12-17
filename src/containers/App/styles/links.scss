@@ -1,7 +1,6 @@
-a {
-  text-decoration: none;
+@import './variables';
 
-  &:hover {
-    text-decoration: none !important;
-  }
+a {
+  text-decoration: underline;
+  color: $lightBlue;
 }

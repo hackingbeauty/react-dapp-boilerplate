@@ -2,8 +2,8 @@ import React, { Component }   from 'react';
 import { connect }            from 'react-redux';
 import { bindActionCreators } from 'redux';
 import injectTapEventPlugin   from 'react-tap-event-plugin';
-import getMuiTheme            from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider       from 'material-ui/styles/MuiThemeProvider';
+import muiTheme               from './styles/theme/mui-theme'
 import { HashRouter,
          Route,
          Redirect,
@@ -37,7 +37,7 @@ export class App extends Component {
     const { ui, actions } = this.props;
 
     return (
-      <MuiThemeProvider muiTheme={getMuiTheme()}>
+      <MuiThemeProvider muiTheme={muiTheme}>
         <div>
           <HashRouter>
             <div>
