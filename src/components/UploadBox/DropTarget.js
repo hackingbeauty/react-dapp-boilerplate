@@ -8,8 +8,8 @@ const boxTarget = {
   drop(props, monitor) {
     if (props.onDrop) {
       props.onDrop(props, monitor)
-	  }
-	}
+    }
+  }
 }
 
 @ReactDnDDropTarget(props => props.accepts, boxTarget, (connect, monitor) => ({
@@ -26,29 +26,95 @@ export default class DropTarget extends Component {
     onDrop 					 : PropTypes.func
   }
 
+  constructor(props) {
+    super(props)
+    const { files  } = props
+    
+    this.state = {
+      files: []
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.files !== this.props.files) {
+      this.setState({ files: nextProps.files })
+    }
+  }
+
   getFileList(files) {
-    const list = files.map(file => (
+    console.log('THE FILES ARE: ', files)
+    const list = files.map(file =>
 			<li key={file.name}>
 				{`${file.name} of size ${file.size} and type ${file.type}`}
 			</li>
-		))
-		return <ul>{list}</ul>
+		)
+		
+    return <ul id="file-list">{list}</ul>
 	}
 
+  showUploadDialogBox=() => {
+    const { files } = this.props
+    
+    if(files.length === 0) {
+      this.inputElement.click()
+    }
+  }
+
+  handleFileUpload=(evt) => {
+    const files = evt.target.files
+    const { onDrop } = this.props
+
+    if(files.length) {
+      onDrop()
+      this.setState({ files: [files[0]] })
+    }
+  }
+
+  getHelperText=() => {
+    let helperText
+    const { files } = this.state
+    const isActive = this.isActive()
+
+    if(isActive) {
+      helperText = 'Release to drop'
+    } else if (!isActive && files.length === 0) {
+      helperText = 'Drag file here'
+    }
+
+    return <span>{helperText}</span>
+  }
+
+  isActive=() => {
+    const { canDrop, isOver } = this.props
+    return canDrop && isOver
+  }
+
   render() {
-    const { canDrop, isOver, connectDropTarget, files } = this.props
-    const isActive = canDrop && isOver
+    const { canDrop, isOver, connectDropTarget} = this.props
+    const { files } = this.state
+    const isActive = this.isActive()
     const fileList = this.getFileList(files)
+    const containerClassName= isActive ? 'drop' : ''
+    const helperText = this.getHelperText()
 
     return connectDropTarget(
-			<div id="upload-container" className={isActive ? 'drop' : ''}>
+			<div id="upload-container" className={containerClassName}>
 	       <div id="upload-actions">
 	        <Icon icon="upload" className="upload-icon" />
-	        <Button label="Choose photo to upload" raised={true} />
-	        <span>{isActive ? 'Release to drop' : 'Drag file here'}</span>
-	        { files.length !== 0 && fileList }
+	        <Button
+            label="Choose photo to upload"
+            raised={true}
+            disabled={files.length} 
+            onTouchTap={this.showUploadDialogBox} />
+          <input 
+            name="myFile" 
+            type="file" 
+            ref={input => this.inputElement = input} 
+            onChange={this.handleFileUpload} />
+          {fileList}
+          {helperText}
 	      </div>
       </div>
 		)
-	}
+  }
 }

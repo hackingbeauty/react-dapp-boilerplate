@@ -10,7 +10,7 @@
 		align-items: center;
 		border: 3px dotted $lighterGrey;
 		height: 300px;
-		width: 80%;
+		width: 70%;
 		margin: 0 auto;
 		background:  $white35;
 		
@@ -20,10 +20,10 @@
 	}
 
 	#upload-actions {
-		width: 300px;
 		text-align: center;
 
-		span {
+		span,
+		#file-list {
 			display: inline-block;
 			margin-top: 15px;
 		}
@@ -33,6 +33,10 @@
 		font-size: 100px;
 		color: $pink;
 		margin-bottom: 10px;
+	}
+
+	input[name="myFile"] {
+		display: none;
 	}
 
 }

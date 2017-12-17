@@ -20,6 +20,10 @@
     max-width: 100%;
   }
 
+  a {
+    text-decoration: underline;
+  }
+
   p {
   	color: $white;
   	line-height:1.3;
@@ -55,6 +59,11 @@
 
   .center {
     text-align: center;
+  }
+
+  .opaque {
+    opacity: 0.3;
+    pointer-events: none;
   }
 
   @media (max-width: 1300px) {

@@ -15,26 +15,28 @@ export default class UploadBox extends Component {
 
   handleFileDrop= (item, monitor) => {
     const { onDrop } = this.props
+    
     if (monitor) {
       const droppedFiles = monitor.getItem().files
       this.setState({ droppedFiles })
-      onDrop()
     }
+    
+    onDrop()
   }
 
-	render() {
+  render() {
     const { FILE } = NativeTypes
     const { droppedFiles } = this.state
 
-	  return (
-  		<DragDropContextProvider backend={HTML5Backend}>
+    return (
+    	<DragDropContextProvider backend={HTML5Backend}>
         <div className={styles}>
-  				<DropTarget
-  					accepts={[FILE]}
-  					onDrop={this.handleFileDrop}
-  					files={droppedFiles} />
-  			</div>
-  		</DragDropContextProvider>
-		)
+    			<DropTarget
+    				accepts={[FILE]}
+    				onDrop={this.handleFileDrop}
+    				files={droppedFiles} />
+    		</div>
+    	</DragDropContextProvider>
+    )
 	}
 }

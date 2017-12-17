@@ -26,22 +26,26 @@ class HomeView extends Component {
   }
 
   registerAsset=() => {
-    
+    alert('route to register view')
   }
 
   render() {
     const { fileAdded } = this.state
+
     return (
       <div className={styles}>   
         <div id="home-view">   
           <UploadBox onDrop={this.onDrop} />
-          {fileAdded && 
-            <Button 
-              onTouchTap={this.registerAsset}
-              label="Register Asset On Blockchain"
-              raised={true}
-              className="tertiary" />
-          }
+            <div className={!fileAdded ? "opaque" : ""}>
+              <div id="register-actions">
+                <Button 
+                  onTouchTap={this.registerAsset}
+                  label="Register Asset On Blockchain"
+                  raised={true}
+                  className="tertiary" />
+                <a id="reset" href="#">Reset</a>
+              </div>
+            </div>
         </div>
       </div>
     );
