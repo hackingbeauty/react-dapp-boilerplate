@@ -1,3 +1,3 @@
 export const appConfig = {
-  name: 'Proof Of Existence'
+  name: 'Proof Of Ex'
 }
