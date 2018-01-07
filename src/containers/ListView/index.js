@@ -11,7 +11,7 @@ export default class ListView extends Component {
   render() {
     return (
       <div className={styles}>    
-        <h2>The List View</h2>
+        List View
       </div>
     );
   }

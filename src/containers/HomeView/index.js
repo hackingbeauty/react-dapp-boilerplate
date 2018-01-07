@@ -36,17 +36,7 @@ class HomeView extends Component {
     return (
       <div className={styles}>   
         <div id="home-view">   
-          <UploadBox onDrop={this.onDrop} />
-            <div className={!fileAdded ? 'opaque' : ''}>
-              <div id="register-actions">
-                <Button 
-                  onTouchTap={this.registerAsset}
-                  label="Register Asset On Blockchain"
-                  raised={true}
-                  className="tertiary" />
-                <a id="reset" href="#">Reset</a>
-              </div>
-            </div>
+         Home View
         </div>
       </div>
     );

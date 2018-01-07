@@ -1,3 +1,3 @@
 export const appConfig = {
-  name: 'Proof Of Ex'
+  name: 'React Dapp Boilerplate'
 }
