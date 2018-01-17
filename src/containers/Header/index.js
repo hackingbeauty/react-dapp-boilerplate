@@ -1,13 +1,12 @@
 import React, { Component }   from 'react';
 import { connect }            from 'react-redux';
 import { bindActionCreators } from 'redux';
-import AppBar                 from 'components/AppBar';
-import Navigation             from 'components/Navigation';
 import { withRouter }         from 'react-router-dom';
 import { appConfig }          from 'core/configs/config-app';
+import AppBar                 from 'components/AppBar';
 
 /* actions */
-import * as uiActionCreators    from 'core/actions/actions-ui';
+import * as uiActionCreators  from 'core/actions/actions-ui';
 
 /* component styles */
 import { styles } from './styles.scss';
