@@ -1,4 +1,5 @@
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+
 const styleVariables = require('sass-extract-loader!../variables.scss');
 
 const { 
@@ -8,11 +9,6 @@ const {
   $pink,
   $white
 } = styleVariables.global
-
-/* 
- * Reference
- * https://github.com/mui-org/material-ui/blob/master/src/styles/getMuiTheme.js 
- */
 
 export default getMuiTheme({
   appBar: {

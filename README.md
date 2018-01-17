@@ -4,10 +4,9 @@ In addition to Webpack and React, this box adds: React-Router, Redux and Materia
 
 ## Installation
 
-1. Install truffle and an ethereum client. For local development, try EthereumJS TestRPC.
+1. Install the Truffle box.
     ```javascript
-    npm install -g truffle // Version 3.0.5+ required.
-    npm install -g ethereumjs-testrpc
+    truffle unbox hackingbeauty/react-dapp-material-ui
     ```
 
 2. Compile and migrate the contracts.

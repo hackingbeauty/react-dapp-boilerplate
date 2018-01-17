@@ -21,8 +21,6 @@ import * as uiActionCreators  from 'core/actions/actions-ui';
 import Header         from 'containers/Header';
 import LeftNavBar     from 'containers/LeftNavBar';
 import HomeView       from 'containers/HomeView';
-import ListView       from 'containers/ListView';
-import DetailsView    from 'containers/DetailsView';
 import Modal          from 'components/Modal';
 
 injectTapEventPlugin();
@@ -44,12 +42,10 @@ export class App extends Component {
               <div className="container">
                 <Switch>
                   <Route path="/home" component={HomeView} />
-                  <Route path="/list" component={ListView} />
                   <Redirect from="/" to="/home" />
                 </Switch>
               </div>
               <LeftNavBar />
-              <DetailsView />
             </div>
           </HashRouter>
           <Modal

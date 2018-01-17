@@ -28,7 +28,6 @@ class Header extends Component {
           <AppBar
             title={appConfig.name}
             onLeftIconButtonTouchTap={this.handleToggle} />
-          <Navigation />
         </header>
       </div>
     );

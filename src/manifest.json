@@ -1,6 +1,6 @@
 {
-  "short_name": "React Dapps",
-  "name": "React Dapps - Course Code",
+  "short_name": "ReactDapp",
+  "name": "React Dapp Boilerplate - Material-UI",
   "start_url": "./?utm_source=web_app_manifest",
   "icons": [
     {

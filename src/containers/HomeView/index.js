@@ -18,7 +18,7 @@ class HomeView extends Component {
     return (
       <div className={styles}>   
         <div id="home-view">   
-         Home View
+         
         </div>
       </div>
     );
