@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -16,7 +17,24 @@ module.exports = {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: ['css-loader','postcss-loader','sass-loader']
+          use: [
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'postcss-loader'
+          }, 
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+              data: '@import "variables";',
+              includePaths: [
+                path.join(__dirname, '..', '../src/containers/App/styles')
+              ]
+            }
+          }
+        ]
         })
       }
     ],

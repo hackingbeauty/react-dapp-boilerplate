@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const precss = require('precss');
@@ -37,7 +38,16 @@ module.exports = {
             }
           }
         },
-        { loader: 'sass-loader' }
+        {
+          loader: 'sass-loader',
+          options: {
+           sourceMap: true,
+           data: '@import "variables";',
+           includePaths: [
+             path.join(__dirname, '..', '../src/containers/App/styles')
+           ]
+          }
+        }
       ]
     }]
   },
