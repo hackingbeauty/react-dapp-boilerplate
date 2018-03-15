@@ -6,7 +6,7 @@ In addition to Webpack and React, this box adds: React-Router, Redux and Materia
 
 1. Install the Truffle box.
     ```javascript
-    truffle unbox hackingbeauty/react-dapp-material-ui
+    truffle unbox hackingbeauty/react-dapp-boilerplate
     ```
 
 2. Compile and migrate the contracts.
