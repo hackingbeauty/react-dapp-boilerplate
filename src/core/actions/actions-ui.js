@@ -1,66 +1,39 @@
-import constants from 'core/types';
+import constants from 'core/types'
 
-/**
- * openLeftNav - Open the left side nav
- */
-export function openLeftNav() {
+export function openModal(obj) {
   return {
-    type: constants.OPEN_LEFT_NAV
-  };
+    type: constants.OPEN_MODAL,
+    modalKey: obj.modalKey
+  }
 }
 
-/**
- * closeLeftNav - Close the left side nav
- */
-export function closeLeftNav() {
+export function openConfirmModal(obj) {
   return {
-    type: constants.CLOSE_LEFT_NAV
-  };
+    type: constants.OPEN_CONFIRM_MODAL,
+    modalKey: obj.modalKey
+  }
 }
 
-/**
- * openRightNav - Open the right side nav
- */
-export function openRightNav() {
-  return {
-    type: constants.OPEN_RIGHT_NAV
-  };
-}
-
-/**
- * closeLeftNav - Close the right side nav
- */
-export function closeRightNav() {
-  return {
-    type: constants.CLOSE_RIGHT_NAV
-  };
-}
-
-/**
- * clear - Just clear the UI
- */
-export function clear() {
-  return {
-    type: constants.CLEAR_UI
-  };
-}
-
-/**
- * showModal - Open the modal
- */
-export function showModal(obj) {
-  return {
-    type        : constants.SHOW_MODAL,
-    title       : obj.title,
-    modalActions: obj.actions
-  };
-}
-
-/**
- * closeConfirm - Close the confirmation modal
- */
 export function closeModal() {
   return {
     type: constants.CLOSE_MODAL
-  };
+  }
+}
+
+export function closeConfirmModal() {
+  return {
+    type: constants.CLOSE_CONFIRM_MODAL
+  }
+}
+
+export function openRightDrawer() {
+  return {
+    type: constants.OPEN_RIGHT_DRAWER
+  }
+}
+
+export function closeRightDrawer() {
+  return {
+    type: constants.CLOSE_RIGHT_DRAWER
+  }
 }

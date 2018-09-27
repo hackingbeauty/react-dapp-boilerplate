@@ -1,13 +1,26 @@
-import React                   from 'react';
-import { AppBar as MuiAppBar } from 'material-ui';
+import React                   from 'react'
+import PropTypes               from 'prop-types'
+import { AppBar as MuiAppBar } from '@material-ui/core'
+import { styles }              from './styles.scss'
 
-/* component styles */
-import { styles } from './styles.scss';
+const AppBar = (props) => {
+  const { children } = props
 
-export default function AppBar(props) {
   return (
     <div className={styles}>
-      <MuiAppBar {...props} className="app-bar" />
+      <MuiAppBar position="static" className="app-bar">
+        {children}
+      </MuiAppBar>
     </div>
-  );
+  )
 }
+
+AppBar.propTypes = {
+  children: PropTypes.node
+}
+
+AppBar.defaultProps = {
+  children: null
+}
+
+export default AppBar

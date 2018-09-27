@@ -1,0 +1,13 @@
+:local(.styles) {
+  text-align: center;
+
+  .main-loader {
+    margin-top: 20%;
+  }
+
+  @media (max-width: 600px) {
+    .main-loader {
+      margin-top: 40%;
+    }
+  }
+}

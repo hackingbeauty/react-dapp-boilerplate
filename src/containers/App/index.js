@@ -1,76 +1,37 @@
-import React, { Component }   from 'react';
-import { connect }            from 'react-redux';
-import { bindActionCreators } from 'redux';
-import injectTapEventPlugin   from 'react-tap-event-plugin';
-import MuiThemeProvider       from 'material-ui/styles/MuiThemeProvider';
-import muiTheme               from './styles/theme/mui-theme'
-import { HashRouter,
-         Route,
-         Redirect,
-         Switch }             from 'react-router-dom';
+import React, { Component }   from 'react'
+import { MuiThemeProvider }   from '@material-ui/core/styles'
+import {
+  HashRouter,
+  Route,
+  Redirect,
+  Switch
+} from 'react-router-dom'
+import theme                    from 'configs/theme/config-theme'
+import HomeView                 from 'containers/HomeView'
+import Header                   from './components/Header'
+import Footer                   from './components/Footer'
 
-/* 
- * Import global styles into entire app 
- */
-import './styles/app.scss';
+import './styles.scss' // global styles
 
-/* actions */
-import * as uiActionCreators  from 'core/actions/actions-ui';
-
-/* application containers & components */
-import Header         from 'containers/Header';
-import LeftNavBar     from 'containers/LeftNavBar';
-import HomeView       from 'containers/HomeView';
-import Modal          from 'components/Modal';
-
-injectTapEventPlugin();
-
-export class App extends Component {
-  constructor(props) {
-    super(props);
-  }
-
+class App extends Component {
   render() {
-    const { ui, actions } = this.props;
-
     return (
-      <MuiThemeProvider muiTheme={muiTheme}>
-        <div>
-          <HashRouter>
-            <div>
-              <Header />
-              <div className="container">
-                <Switch>
-                  <Route path="/home" component={HomeView} />
-                  <Redirect from="/" to="/home" />
-                </Switch>
-              </div>
-              <LeftNavBar />
+      <MuiThemeProvider theme={theme}>
+        <HashRouter>
+          <div>
+            <Header />
+            <Footer />
+            <div className="app-shell">
+              <Switch>
+                <Route path="/home" component={HomeView} />
+                <Redirect from="/" to="/home" />
+              </Switch>
             </div>
-          </HashRouter>
-          <Modal
-            open={ui.showModal}
-            actions={ui.modalActions}
-            uiActions={actions.ui}
-            title={ui.modalTitle}/>
-        </div>
+          </div>
+        </HashRouter>
       </MuiThemeProvider>
-    );
+    )
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    ui: state.ui
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    actions: {
-      ui: bindActionCreators(uiActionCreators, dispatch)
-    }
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App

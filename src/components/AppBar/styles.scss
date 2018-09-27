@@ -1,12 +1,5 @@
 :local(.styles) {
   .app-bar {
-    min-height: 75px;
+    background: $theme1;
   }
-
-  @media (max-width: 1300px) {
-  	h1 {
-  		display: none;
-  	}
-  }
-
 }

@@ -1,60 +1,62 @@
-import constants from 'core/types';
+import constants from 'core/types'
 
 const initialState = {
-  leftNavOpen  : false,
-  rightNavOpen : false,
-  showModal    : false,
-  modalActions : [],
-  modalTitle   : ''
-};
+  modalState: {
+    openModal: false,
+    modalKey: ''
+  },
+  confirmModalState: {
+    openModal: false,
+    modalKey: ''
+  },
+  rightDrawerIsOpen: false
+}
 
-export function uiReducer(state = initialState, action) {
+function uiReducer(state = initialState, action) {
   switch (action.type) {
+    case constants.OPEN_MODAL:
+      return Object.assign({}, state, {
+        modalState: {
+          openModal: true,
+          modalKey: action.modalKey
+        }
+      })
 
-  case constants.OPEN_LEFT_NAV:
-    return Object.assign({}, state, {
-      leftNavOpen: true
-    });
+    case constants.OPEN_CONFIRM_MODAL:
+      return Object.assign({}, state, {
+        confirmModalState: {
+          openModal: true,
+          modalKey: action.modalKey
+        }
+      })
 
-  case constants.CLOSE_LEFT_NAV:
-    return Object.assign({}, state, {
-      leftNavOpen: false
-    });
+    case constants.CLOSE_MODAL:
+      return Object.assign({}, state, {
+        modalState: {
+          openModal: false
+        }
+      })
 
-  case constants.OPEN_RIGHT_NAV:
-    return Object.assign({}, state, {
-      rightNavOpen: true
-    });
+    case constants.CLOSE_CONFIRM_MODAL:
+      return Object.assign({}, state, {
+        confirmModalState: {
+          openModal: false
+        }
+      })
 
-  case constants.CLOSE_RIGHT_NAV:
-    return Object.assign({}, state, {
-      rightNavOpen: false
-    });
+    case constants.OPEN_RIGHT_DRAWER:
+      return Object.assign({}, state, {
+        rightDrawerIsOpen: true
+      })
 
-  case constants.CLEAR_UI:
-    return Object.assign({}, state, {
-      leftNavOpen : false,
-      rightNavOpen: false,
-      showModal   : false,
-      modalActions : [],
-      modalTitle : ''
-    });
+    case constants.CLOSE_RIGHT_DRAWER:
+      return Object.assign({}, state, {
+        rightDrawerIsOpen: false
+      })
 
-  case constants.SHOW_MODAL:
-    return Object.assign({}, state, {
-      showModal   : true,
-      modalActions: action.modalActions,
-      modalTitle  : action.title
-    });
-
-  case constants.CLOSE_MODAL:
-    return Object.assign({}, state, {
-      showModal    : false,
-      modalActions : [],
-      modalTitle   : ''
-    });
-
-  default:
-    return state;
+    default:
+      return state
   }
 }
+
+export default uiReducer
