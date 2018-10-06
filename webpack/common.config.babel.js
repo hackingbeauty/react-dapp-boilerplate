@@ -11,7 +11,7 @@ const TARGET = process.env.npm_lifecycle_event
 
 const PATHS = {
   app: path.join(__dirname, '../src'),
-  build: path.join(__dirname, '../dist')
+  build: path.join(__dirname, '../build')
 }
 
 process.env.BABEL_ENV = TARGET
@@ -19,7 +19,7 @@ process.env.BABEL_ENV = TARGET
 const common = {
   entry: [
     'babel-polyfill',
-    path.resolve(PATHS.app, 'index.js')
+    PATHS.app
   ],
 
   output: {
@@ -29,7 +29,7 @@ const common = {
 
   resolve: {
     extensions: ['.jsx', '.js', '.json', '.scss'], /* Enables devs to leave off extension when importing */
-    modules: ['node_modules', PATHS.app] /* Tell Wepback what directories to search when resolving modules */
+    modules: ['node_modules', PATHS.app, PATHS.build] /* Tell Wepback what directories to search when resolving modules */
   },
 
   module: {
