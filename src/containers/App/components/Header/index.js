@@ -8,6 +8,7 @@ import IconButton           from '@material-ui/core/IconButton'
 import Menu                 from '@material-ui/core/Menu'
 import MenuItem             from '@material-ui/core/MenuItem'
 import AccountCircle        from '@material-ui/icons/AccountCircle'
+import { appConfig }        from 'configs/config-main'
 import { styles }           from './styles.scss'
 
 class Header extends Component {
@@ -69,7 +70,7 @@ class Header extends Component {
         <AppBar>
           <Toolbar>
             <Typography variant="title" color="inherit">
-              Your Dapp Name
+              {appConfig.name}
             </Typography>
             {menu}
           </Toolbar>
