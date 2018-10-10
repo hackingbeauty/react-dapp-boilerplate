@@ -1,8 +1,8 @@
 /* Main app configs go here */
 
 export const appConfig = {
-  name: 'YourReactDapp',
+  name: 'Your React Dapp Name',
   shortName: 'YourReactDapp',
-  description: 'A foundational boilerplate for a React Dapp For Ethereum',
+  description: 'An expert foundational React boilerplate for Ethereum Dapps',
   splashScreenBackground: '#ffffff'
 }
