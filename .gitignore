@@ -2,8 +2,6 @@
 
 # dependencies
 node_modules
-package-json.lock
-yarn.lock
 
 # testing
 coverage
