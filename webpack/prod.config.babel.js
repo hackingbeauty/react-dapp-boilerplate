@@ -54,7 +54,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
-
     new WebpackPwaManifest({
       name: appConfig.name,
       short_name: appConfig.shortName,
