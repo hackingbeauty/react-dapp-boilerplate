@@ -1,11 +1,10 @@
+import 'babel-polyfill'
 import webpack      from 'webpack'
 import path         from 'path'
 import merge        from 'webpack-merge'
 import autoprefixer from 'autoprefixer'
 import development  from './dev.config.babel'
 import production   from './prod.config.babel'
-
-require('babel-polyfill')
 
 const TARGET = process.env.npm_lifecycle_event
 
