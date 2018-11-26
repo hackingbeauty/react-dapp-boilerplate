@@ -2,18 +2,16 @@ import 'babel-polyfill'
 import webpack      from 'webpack'
 import path         from 'path'
 import merge        from 'webpack-merge'
-import autoprefixer from 'autoprefixer'
 import development  from './dev.config.babel'
 import production   from './prod.config.babel'
 
 const TARGET = process.env.npm_lifecycle_event
+process.env.BABEL_ENV = TARGET
 
 const PATHS = {
   app: path.join(__dirname, '../src'),
   build: path.join(__dirname, '../build')
 }
-
-process.env.BABEL_ENV = TARGET
 
 const common = {
   entry: [
@@ -48,10 +46,7 @@ const common = {
   plugins: [
     new webpack.LoaderOptionsPlugin({
       options: {
-        context: __dirname,
-        postcss: [
-          autoprefixer()
-        ]
+        context: __dirname
       }
     })
   ]
