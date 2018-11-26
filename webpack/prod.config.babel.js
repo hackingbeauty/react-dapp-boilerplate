@@ -41,12 +41,6 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: '"production"'
-      },
-      __DEVELOPMENT__: false
-    }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
@@ -60,11 +54,9 @@ module.exports = {
       description: appConfig.description,
       background_color: appConfig.splashScreenBackground
     }),
-    new CopyWebpackPlugin([
-      {
-        from: 'src/assets',
-        to: 'assets'
-      }
-    ])
+    new CopyWebpackPlugin([{
+      from: 'src/assets',
+      to: 'assets'
+    }])
   ]
 }

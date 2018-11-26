@@ -24,8 +24,8 @@ const common = {
   },
 
   resolve: {
-    extensions: ['.jsx', '.js', '.json', '.scss'], /* Enables devs to leave off extension when importing */
-    modules: ['node_modules', PATHS.app, PATHS.build] /* Tell Wepback what directories to search when resolving modules */
+    extensions: ['.jsx', '.js', '.json', '.scss'],
+    modules: ['node_modules', PATHS.app, PATHS.build]
   },
 
   module: {
