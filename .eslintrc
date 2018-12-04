@@ -51,6 +51,7 @@
       skipShapeProps: false
     }],
     "import/prefer-default-export": "off",
-    "function-paren-newline": "off"
+    "function-paren-newline": "off",
+    "jsx-a11y/label-has-for": "off"
   }
 }
