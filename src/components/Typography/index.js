@@ -9,7 +9,7 @@ class Typography extends Component {
 
     return (
       <div className={styles}>
-        <MuiTypography variant="title" color="inherit">
+        <MuiTypography variant="h6" color="inherit">
           {children}
         </MuiTypography>
       </div>

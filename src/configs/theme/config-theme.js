@@ -18,6 +18,9 @@ const theme = createMuiTheme({
     error: {
       main: colors.error
     }
+  },
+  typography: {
+    useNextVariants: true
   }
 })
 
