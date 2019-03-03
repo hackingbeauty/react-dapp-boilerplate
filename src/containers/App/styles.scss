@@ -30,7 +30,13 @@
     display: inline-block;
     height: 86vh;
     width: 100%;
-    margin-top: 80px;
+    margin-top: 75px;
+  }
+
+  @media (max-width: 500px) {
+    .app-shell {
+      margin-top: 45px;
+    }
   }
 
 }

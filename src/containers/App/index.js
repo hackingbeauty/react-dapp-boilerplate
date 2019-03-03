@@ -49,7 +49,7 @@ class App extends Component {
             <Footer />
             <div className="app-shell">
               { isLoading ? (
-                <ProgressIndicator />
+                <ProgressIndicator color="secondary" size={50} />
               ) : (
                 <Switch>
                   <Route path="/home" component={HomeView} />
