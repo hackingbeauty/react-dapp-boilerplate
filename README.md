@@ -4,7 +4,7 @@ React Dapp Boilerplate is an expert React boilerplate for building user-facing D
 
 Material-UI is baked into the boilerplate to help you quickly start prototyping your Dapp.  If you need expert guidance in developing a user-facing Dapp, checkout [Full Stack Dapps now](http://fullstackdapps.com).
 
-If you have any questions, [join my Slack channel](https://publicslack.com/slacks/hackingbeauty/invites/new).
+If you have any questions, [join the Full Stack DApps Slack channel](https://publicslack.com/slacks/full-stack-dapps/invites/new).
 
 ## Installation
 
