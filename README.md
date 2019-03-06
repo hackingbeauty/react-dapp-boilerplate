@@ -1,8 +1,8 @@
 # React, Redux, Truffle, and Material-UI for bootstrapping a Dapp
 
-React Dapp Boilerplate is an expert React boilerplate for building user-facing Dapps.  It's built with the latest versions of React, Redux, and Webpack and has a superior organization and directory structure.  It comes with a solid CSS architecture that helps you correctly skin your Dapp for responsive viewports (both mobile and desktop).
+React Dapp Boilerplate is an expert React boilerplate for building full-stack DApps.  It's built with the latest versions of React, Redux, and Webpack and has a superior organization and directory structure.  It comes with a solid CSS architecture that helps you correctly skin your DApp for responsive viewports (both mobile and desktop).
 
-Material-UI is baked into the boilerplate to help you quickly start prototyping your Dapp.  If you need expert guidance in developing a user-facing Dapp, checkout [Full Stack Dapps now](http://fullstackdapps.com).
+Material-UI is baked into the boilerplate to help you quickly start prototyping your DApp.  If you need expert guidance in developing a full-stack Dapp, checkout [Full Stack DApps now](http://fullstackdapps.com).
 
 If you have any questions, [join the Full Stack DApps Slack channel](https://publicslack.com/slacks/full-stack-dapps/invites/new).
 
