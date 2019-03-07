@@ -1,14 +1,16 @@
 # Connect Ethereum Smart Contracts To A Superior UI Foundation
 
+[www.reactboilerplate.com](https://www.reactboilerplate.com)
+
 React Dapp Boilerplate is an expert React boilerplate for building full-stack DApps.  It's built with the latest versions of React, Redux, and Webpack and has a superior organization and directory structure.  It comes with a solid CSS architecture that helps you correctly skin your DApp.
 
 Material-UI is baked into the boilerplate to help you quickly start prototyping your DApp.  If you need expert guidance in developing a full-stack Dapp, checkout [Full Stack DApps now](http://fullstackdapps.com).
 
 If you have any questions, [join the Full Stack DApps Slack channel](https://publicslack.com/slacks/full-stack-dapps/invites/new).
 
-[Watch the intro video on Youtube to learn more.](https://www.youtube.com/watch?v=0guqPdxM2GE&t=56s)
+[Also, watch the intro video on Youtube to learn more.](https://www.youtube.com/watch?v=0guqPdxM2GE&t=56s)
 
-![React Dapp Boilerplate snapshot][http://reactdappboilerplate.com/ce3ab1e8fb1d043d79bfdcce28bd4118.png]
+![React Dapp Boilerplate snapshot](http://reactdappboilerplate.com/ce3ab1e8fb1d043d79bfdcce28bd4118.png)
 
 ## Installation
 
