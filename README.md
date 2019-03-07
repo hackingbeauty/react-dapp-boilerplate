@@ -8,7 +8,7 @@ Material-UI is baked into the boilerplate to help you quickly start prototyping 
 
 If you have any questions, [join the Full Stack DApps Slack channel](https://publicslack.com/slacks/full-stack-dapps/invites/new).
 
-[Also, watch the intro video on Youtube to learn more.](https://www.youtube.com/watch?v=0guqPdxM2GE&t=56s)
+Also, watch the [intro video on Youtube](https://www.youtube.com/watch?v=0guqPdxM2GE&t=56s) to learn more.
 
 ![React Dapp Boilerplate snapshot](http://reactdappboilerplate.com/ce3ab1e8fb1d043d79bfdcce28bd4118.png)
 
