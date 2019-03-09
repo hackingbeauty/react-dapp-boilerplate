@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hackingbeauty/base-single-page-app-architecture.git"
+    "url": "https://github.com/hackingbeauty/react-dapp-boilerplate.git"
   },
   "devDependencies": {
     "autoprefixer": "^6.6.1",
