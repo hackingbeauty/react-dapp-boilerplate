@@ -1,6 +1,6 @@
 # Connect Ethereum Smart Contracts To A Superior UI Foundation
 
-[www.reactboilerplate.com](https://www.reactdappboilerplate.com)
+[www.reactdappboilerplate.com](http://www.reactdappboilerplate.com)
 
 React Dapp Boilerplate is an expert React boilerplate for building full-stack DApps.  It's built with the latest versions of React, Redux, and Webpack and has a superior organization and directory structure.  It comes with a solid CSS architecture that helps you correctly skin your DApp.
 
