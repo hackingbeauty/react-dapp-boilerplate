@@ -79,6 +79,7 @@
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
+    "sha256": "^0.2.0",
     "truffle-contract": "^3.0.6",
     "validator": "^10.9.0",
     "web3": "0.20.6",
