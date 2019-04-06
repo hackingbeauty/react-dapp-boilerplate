@@ -3,7 +3,7 @@ import path                 from 'path'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import ExtractTextPlugin    from 'extract-text-webpack-plugin'
 import HtmlWebpackPlugin    from 'html-webpack-plugin'
-import CopyWebpackPlugin    from'copy-webpack-plugin'
+import CopyWebpackPlugin    from 'copy-webpack-plugin'
 
 module.exports = {
   mode: 'production',
@@ -47,7 +47,7 @@ module.exports = {
       },
       __DEVELOPMENT__: false
     }),
-    new ExtractTextPlugin({filename:'bundle.css'}),
+    new ExtractTextPlugin({ filename: 'bundle.css' }),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
@@ -59,14 +59,8 @@ module.exports = {
     new CopyWebpackPlugin([
       {
         from: 'src/assets',
-        to  : 'assets'
-      }
-    ]),
-    new CopyWebpackPlugin([
-      {
-        from: 'src/assets',
-        to  : 'assets'
+        to: 'assets'
       }
     ])
   ]
-};
+}

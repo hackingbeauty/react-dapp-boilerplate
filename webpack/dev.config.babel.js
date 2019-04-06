@@ -1,8 +1,6 @@
 import webpack            from 'webpack'
 import path               from 'path'
 import HtmlWebpackPlugin  from 'html-webpack-plugin'
-import precss             from  'precss'
-import autoprefixer       from 'autoprefixer'
 
 module.exports = {
   mode: 'development',
@@ -59,4 +57,4 @@ module.exports = {
       template: 'src/index.html'
     })
   ]
-};
+}
