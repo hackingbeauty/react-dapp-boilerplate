@@ -5,9 +5,6 @@ import HtmlWebpackPlugin  from 'html-webpack-plugin'
 module.exports = {
   mode: 'development',
   devtool: 'source-map',
-  output: {
-    publicPath: ''
-  },
 
   devServer: {
     stats: 'errors-only', // Display only errors to reduce the amount of output.
