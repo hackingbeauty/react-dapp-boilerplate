@@ -11,7 +11,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.scss$/i,
         use: [
           { loader: MiniCssExtractPlugin.loader },
           { loader: 'css-loader' },
@@ -42,11 +42,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
-    new CopyWebpackPlugin([
-      {
-        from: 'src/manifest.json',
-        to: 'manifest.json'
-      }
-    ])
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: 'src/manifest.json',
+          to: 'manifest.json'
+        }
+      ]
+    })
   ]
 }
