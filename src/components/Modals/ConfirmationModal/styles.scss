@@ -1,0 +1,10 @@
+:local(.styles) {
+  .dialog-title,
+  .dialog-content {
+    padding: 0px;
+  }
+
+  @media (min-width: 900px) {
+    width: 400px;
+  }
+}

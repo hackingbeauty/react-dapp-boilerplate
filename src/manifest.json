@@ -1,0 +1,21 @@
+{
+  "short_name": "YourDAppName",
+  "name": "A description of your dApp",
+  "start_url": "./?utm_source=web_app_manifest",
+  "icons": [
+    {
+      "src": "/images/chrome-touch-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/chrome-touch-icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    }
+  ],
+  "background_color": "#00BCD4",
+  "theme_color": "#00BCD4",
+  "display": "standalone",
+  "orientation": "portrait"
+}
