@@ -1,21 +1,18 @@
-import webpack            from 'webpack'
-import path               from 'path'
-import HtmlWebpackPlugin  from 'html-webpack-plugin'
+import webpack           from 'webpack'
+import path              from 'path'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 module.exports = {
   mode: 'development',
   devtool: 'source-map',
-
-  devServer: {
-    stats: 'errors-only', // Display only errors to reduce the amount of output.
-    host: process.env.HOST, // Defaults to `localhost`
-    port: '3000', // Defaults to 8080
-    open: true, // Open the page in browser
-    historyApiFallback: true
+  entry: [
+    'webpack-hot-middleware/client'
+  ],
+  output: {
+    publicPath: ''
   },
 
   module: {
-    noParse: [new RegExp('node_modules/localforage/dist/localforage.js')],
     rules: [{
       test: /\.scss$/,
       use: [
@@ -23,9 +20,7 @@ module.exports = {
         {
           loader: 'css-loader',
           options: {
-            modules: {
-              localIdentName: '[hash:base64:5][path]-[local]'
-            }
+            localIdentName: '[hash:base64:5][path]-[local]'
           }
         },
         { loader: 'resolve-url-loader' },
@@ -33,9 +28,9 @@ module.exports = {
           loader: 'sass-loader',
           options: {
             sourceMap: true,
-            data: '@import "config-styles.scss";',
+            data: '@import "theme/config-styles";',
             includePaths: [
-              path.join(__dirname, '..', '/src/configs/theme')
+              path.join(__dirname, '..', '/src/configs')
             ]
           }
         }

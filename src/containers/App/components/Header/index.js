@@ -72,7 +72,7 @@ class Header extends Component {
             <Typography variant="title" color="inherit">
               {appConfig.name}
             </Typography>
-            {menu}
+            <div className="dropdown">{menu}</div>
           </Toolbar>
         </AppBar>
       </div>
@@ -81,7 +81,9 @@ class Header extends Component {
 }
 
 Header.propTypes = {
-  history: PropTypes.shape({}).isRequired
+  history: PropTypes.shape({
+    push: PropTypes.string.isRequired
+  }).isRequired
 }
 
 export default withRouter(Header)
