@@ -1,1 +1,18 @@
+# dependencies
 node_modules
+package-json.lock
+yarn.lock
+
+# testing
+coverage
+
+# production
+build
+dist
+
+# misc
+.DS_Store
+.env
+npm-debug.log
+yarn-error.log
+.truffle-solidity-loader
