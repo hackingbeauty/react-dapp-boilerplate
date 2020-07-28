@@ -6,14 +6,14 @@
 
   .dropdown {
     position: absolute;
+    top: 2px;
     right: 10px;
-    top: 4px;
     z-index: 2;
   }
 
   @media (min-width: 900px) {
     .dropdown {
-      top: 10px;
+      top: 4px;
       right: 20px;
     }
   }
