@@ -1,8 +1,8 @@
 /* Main app configs go here */
 
 export const appConfig = {
-  name: 'Smart Green Bonds',
-  shortName: 'SmartGreenBond',
-  description: 'Sustainability-linked green bonds on Ethereum',
+  name: 'React DApp Boilerplate',
+  shortName: 'ReactDAppBoilerplate',
+  description: 'Front-end foundational boilerplate for Ethereum dApps',
   splashScreenBackground: '#ffffff'
 }
